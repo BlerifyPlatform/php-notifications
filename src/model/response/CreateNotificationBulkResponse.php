@@ -23,7 +23,6 @@ class CreateNotificationBulkResponse implements JsonSerializable
         foreach ($data['items'] ?? [] as $item) {
             $response->items[] = NotificationItemResponse::fromArray($item);
         }
-        echo "encoded is::: " . json_encode($response->items) .  "\n";
         return $response;
     }
 
